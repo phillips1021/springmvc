@@ -5,7 +5,7 @@
 <title>Spring MVC Web Example Home Page</title>
 </head>
 <body>
-	<h1>Welcome to Spring MVC Web Example Home Page</h1>
+	<h1>Welcome to Spring MVC Example Home Page</h1>
 	
 	<c:forEach items="${people}" var="person">
 		<p>Person: <c:out value="${person.firstName}" /> <c:out value="${person.lastName}" /> </p>

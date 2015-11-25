@@ -17,12 +17,12 @@
     </logger>
 
   <logger name="org.springframework.web" >
-  	<level value="DEBUG" />
+  	<level value="WARN" />
   </logger>
 
-   <!-- for all other loggers log only info and above log messages -->
+   <!-- for all other loggers log only warn and above log messages -->
      <root>
-        <priority value="DEBUG"/> 
+        <priority value="WARN"/> 
         <appender-ref ref="STDOUT" />
      </root> 
     
