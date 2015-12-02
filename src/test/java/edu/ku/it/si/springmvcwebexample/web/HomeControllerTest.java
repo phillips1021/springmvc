@@ -74,7 +74,7 @@ public class HomeControllerTest {
         MockMvc mockMvc
                 = MockMvcBuilders.standaloneSetup(controller).build();
 
-        mockMvc.perform(get("/Phillips"))
+        mockMvc.perform(get("/lastname/Phillips"))
                 .andExpect(view().name("home"))
                 .andExpect(model().attributeExists("people"))
                 .andExpect(model().attribute("people", people));

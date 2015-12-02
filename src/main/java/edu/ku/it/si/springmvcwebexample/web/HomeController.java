@@ -38,7 +38,7 @@ public class HomeController {
 
     }
 
-    @RequestMapping(value = "/{lastName}", method = RequestMethod.GET)
+    @RequestMapping(value = "/lastname/{lastName}", method = RequestMethod.GET)
     public String home(@PathVariable("lastName") String lastName, Model model) {
 
         
