@@ -49,5 +49,36 @@ public class HomeControllerTest {
                 .andExpect(model().attribute("people", people));
 
     }
+  
+    @Test
+    public void testHomePageLastName() throws Exception {
+
+        Person p1 = new Person();
+        p1.setFirstName("Bruce");
+        p1.setLastName("Phillips");
+
+        
+
+        List<Person> people = new ArrayList<>();
+
+        people.add(p1);
+
+
+        PersonService personService = mock(PersonService.class);
+
+        when(personService.getPeople("Phillips")).thenReturn(people);
+
+        HomeController controller = new HomeController();
+        controller.setPersonService(personService);
+
+        MockMvc mockMvc
+                = MockMvcBuilders.standaloneSetup(controller).build();
+
+        mockMvc.perform(get("/Phillips"))
+                .andExpect(view().name("home"))
+                .andExpect(model().attributeExists("people"))
+                .andExpect(model().attribute("people", people));
+
+    }
 
 }
