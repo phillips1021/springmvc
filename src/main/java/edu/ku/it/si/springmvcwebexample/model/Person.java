@@ -1,6 +1,3 @@
-/**
- * 
- */
 package edu.ku.it.si.springmvcwebexample.model;
 
 /**
